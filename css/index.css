@@ -287,11 +287,14 @@
 /* ------- SIDEBAR NHỎ ------- */
 .sidebar {
     width: 19%;
+    min-width: 250px; /* Đặt giới hạn nhỏ nhất để không bị thu nhỏ quá mức */
+    max-width: 300px; /* Đặt giới hạn lớn nhất nếu cần */
     background-color: white;
     padding: 12px;
     border-left: 4px solid #9E9E9E;
     border-radius: 6px;
 }
+
 
 /* ------- MENU BUTTON ------- */
 
@@ -584,6 +587,23 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 100%; /* Giữ sidebar luôn rộng 100% màn hình */
+        min-width: unset; /* Hủy giới hạn min-width */
+        max-width: unset; /* Hủy giới hạn max-width */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Đảm bảo sidebar không bị méo */
+        padding: 12px; /* Giữ padding không thay đổi */
+        border-radius: 6px; /* Giữ bo góc */
+    }
+}
+
+
 /**/
 /* Cấu trúc chính: Resort bên trái, Sidebar bên phải */
 .main-content {
@@ -593,6 +613,11 @@
     max-width: 71%;
     margin: 30px auto;
     gap: 30px;
+ 
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Bố cục resort */
@@ -625,6 +650,7 @@
     justify-content: space-between;
     border-radius: 5px;
     margin-bottom: 20px;
+
 }
 
     .resort-title::after {
