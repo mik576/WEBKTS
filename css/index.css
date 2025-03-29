@@ -1011,7 +1011,7 @@
     transition: transform 0.3s ease-in-out;
     margin: 0 auto; /* Căn giữa khi thu nhỏ */
     width: 81%;
-    margin-left: -43px;
+    margin-left: -54px;
 }
 
 /* Tiêu đề danh sách */
@@ -1031,7 +1031,7 @@
 
 /* Nút chuyển danh sách */
 .prev-btn, .next-btn {
-    background: #DFA974;
+    background: #3a6e00;
     border: none;
     color: white;
     font-size: 18px;
@@ -1042,7 +1042,7 @@
 }
 
     .prev-btn:hover, .next-btn:hover {
-        background: #3a6e00;
+        background: #DFA974;
     }
 
 /* Danh sách khách sạn */
